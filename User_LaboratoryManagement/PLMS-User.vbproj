@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{21559A63-203F-4900-9DF6-2F8F91142DA3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>User_LaboratoryManagement.My.MyApplication</StartupObject>
+    <RootNamespace>User_LaboratoryManagement</RootNamespace>
+    <AssemblyName>PLMS-User</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Darkzeno\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>PLMS-User.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>PLMS-User.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>.\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>.\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\MySql.Data.DLL</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin_db.Designer.vb">
+      <DependentUpon>Admin_db.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_db.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="error_message.Designer.vb">
+      <DependentUpon>error_message.vb</DependentUpon>
+    </Compile>
+    <Compile Include="error_message.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forgot_email_pass.Designer.vb">
+      <DependentUpon>forgot_email_pass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forgot_email_pass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.vb">
+      <DependentUpon>Home.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Home.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Info.Designer.vb">
+      <DependentUpon>Info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Info.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="my_account.Designer.vb">
+      <DependentUpon>my_account.vb</DependentUpon>
+    </Compile>
+    <Compile Include="my_account.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newpass.Designer.vb">
+      <DependentUpon>newpass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="newpass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notif\errorMessage.Designer.vb">
+      <DependentUpon>errorMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Notif\errorMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="request_Item.Designer.vb">
+      <DependentUpon>request_Item.vb</DependentUpon>
+    </Compile>
+    <Compile Include="request_Item.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sercurity_code.Designer.vb">
+      <DependentUpon>sercurity_code.vb</DependentUpon>
+    </Compile>
+    <Compile Include="sercurity_code.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Server_db.Designer.vb">
+      <DependentUpon>Server_db.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Server_db.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splash_screen.Designer.vb">
+      <DependentUpon>splash_screen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="splash_screen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQLConn.vb" />
+    <Compile Include="Success.Designer.vb">
+      <DependentUpon>Success.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Success.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Attendance.Designer.vb">
+      <DependentUpon>User_Attendance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User_Attendance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view_item.Designer.vb">
+      <DependentUpon>view_item.vb</DependentUpon>
+    </Compile>
+    <Compile Include="view_item.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin_db.resx">
+      <DependentUpon>Admin_db.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="error_message.resx">
+      <DependentUpon>error_message.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forgot_email_pass.resx">
+      <DependentUpon>forgot_email_pass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info.resx">
+      <DependentUpon>Info.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="my_account.resx">
+      <DependentUpon>my_account.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newpass.resx">
+      <DependentUpon>newpass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="request_Item.resx">
+      <DependentUpon>request_Item.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sercurity_code.resx">
+      <DependentUpon>sercurity_code.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Server_db.resx">
+      <DependentUpon>Server_db.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splash_screen.resx">
+      <DependentUpon>splash_screen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Success.resx">
+      <DependentUpon>Success.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Attendance.resx">
+      <DependentUpon>User_Attendance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view_item.resx">
+      <DependentUpon>view_item.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\220px-University_of_Mindanao_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-attendance-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reservation-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-attendance-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lab-items-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-rounded-up-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-account-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\69282263.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7007947239_8602a14360_b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-science-application-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-science-application-1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reply-arrow-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-math-40 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minus-40 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-math-40 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minus-40 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-expand-arrow-60 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-thermometer-automation-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-thermometer-automation-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-thermometer-automation-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-science-application-75.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-name-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-name-1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lab-items-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lab-items-100 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lab-items-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lab-items-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-admin-settings-male-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-male-user-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-database-administrator-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-801.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-key-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-key-1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-150.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-110.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ok-110.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ok-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ok-80 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ok-1101.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-info-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-shopping-cart-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-shopping-cart-1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-35 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-physics-100.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
