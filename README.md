@@ -1,2 +1,2 @@
 # PLMS-User
- Laboratory Management System Using Visual Basic (Undergraduate Project 2021)
+ Laboratory Management System Using Visual Basic (2nd Year Project 2020)
